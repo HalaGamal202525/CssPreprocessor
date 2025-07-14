@@ -1,0 +1,33 @@
+@primary:blue;
+
+.btn{
+    background-color: @primary;
+    &:hover{
+        color: @primary;
+        background-color: white;
+    }
+}
+
+//conditional
+.theme(@type) when (@type= dark){
+    background-color: black;
+}
+.theme(@type) when (@type= light){
+    background-color: rgb(255, 255, 255);
+}
+
+body{
+    .theme(dark);
+}
+
+
+.calculateWidth(@n ,@i :1 ) when (@i <= @n){
+
+    .col-@{i}{
+        width:percentage((@i / 12));
+    }
+
+    .calculateWidth(@n, @i + 1);
+}
+
+.calculateWidth(12);

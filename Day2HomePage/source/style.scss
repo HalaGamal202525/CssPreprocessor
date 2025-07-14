@@ -1,0 +1,403 @@
+$danger:#e11212;
+$primary:rgb(28, 153, 237);
+$secondary:#353333;
+$warning:#fff82f;
+
+// .btn{
+//     all: unset;
+//     padding: 20px;
+//     border: 2px solid $btn-color ;
+
+// }
+// a{
+//     @extend .btn;
+//     cursor: pointer;
+//     color: #ad7474;
+// }
+@use "sass:color";
+@use "sass:math";
+
+@import "./mixin";
+@import "./gridsystem";
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:sans-serif;
+}
+.navbar {
+  background-color: $secondary;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
+.Second-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin-block: 20px;
+
+    .content{
+        .circle{
+            @include circle-bg("/bg.jpg", $size: 100px);
+            
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{
+            font-size: 1rem;
+            text-align: center;
+           
+        }
+
+
+    }
+    
+}
+.lab-img {
+    height: 100%;
+    width: 100%;
+    background-image: url("../lab.png");
+    background-size: cover;
+    background-position: center;
+  }
+  
+.lab-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    
+   img {
+        
+        height: 50%;
+        width: 50%;
+       
+      }
+      
+  
+    .content {
+     
+      padding: 2rem;
+  
+      h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+  
+      .btn {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 0.7rem 1.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+  
+.cta-button {
+  @include Btn-Color($bgcolor:$danger,$fontColor:white);
+  font-size: 1.2rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+}
+.hero {
+    @include bg-section("/img1.jpg");
+  }
+  
+  .company-section {
+    @include bg-section("/img2.jpg");
+  }
+  .sec4{
+    @include bg-section("/img4.jpg", true);
+  }
+  .sec5{
+    margin: 2rem ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    img{
+      border:solid 2px $primary;
+      border-radius: 50%;
+      margin-top: 2rem;
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .sec6 {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .title {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  
+    .logos {
+      display: grid;
+      grid-template-columns: repeat(2, auto); // صفين
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+  
+      img {
+        width:472px;
+        height: 140px;
+        
+      }
+    }
+    
+  }
+  .sec7 {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: left;
+  
+    p {
+      max-width: 500px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+  
+    .btn1,
+    .btn2 {
+      @include Btn-Color($bgcolor: $primary, $fontColor: white);
+      padding: 0.7rem 1.5rem;
+      border-radius: 25px;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+      white-space: nowrap;
+    }
+  
+    .btn2 {
+      background-color: white;
+      color: $primary;
+      border: 2px solid $primary;
+  
+      &:hover {
+        background-color: $primary;
+        color: white;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+  
+      p {
+        text-align: center;
+      }
+    }
+  }
+  .sec8{
+    display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 345px;
+    .column{
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin: 2rem;
+    }
+    .row{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 2rem;
+      img{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+      }
+    }
+    img{
+      width: 50%;
+      height: 345px;
+
+
+    }
+  }
+  
+  
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+.cards-body{
+    @include flexContainer($justify:space-between);
+
+    .card{
+        width: 40%;
+        @include flexContainer($justify:space-around);
+
+        img{
+            width: 40%;
+        }
+        p{
+            width: 50%;
+        }
+    }
+}
+.btn{
+    @include Btn-Color($bgcolor:$primary,$fontColor:white);
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+
+    &:hover {
+        background-color: darken($primary, 10%);
+        color: white;
+    }
+}
+.footer {
+  background-color: #fff;
+  padding: 2rem 0;
+  color: #333;
+  font-size: 0.9rem;
+
+  .container {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 4rem;
+
+      h4 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 0.3rem;
+
+          a {
+            text-decoration: none;
+            color: #333;
+
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+
+      .btn-register {
+        @include Btn-Color($bgcolor: $primary, $fontColor: white);
+        border-radius: 5px;
+      }
+
+      .btn-login {
+        @include Btn-Color($bgcolor: white, $fontColor: $primary);
+        border: 1px solid $primary;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+
+      .icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #ccc;
+      }
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: #777;
+    }
+  }
+}
+

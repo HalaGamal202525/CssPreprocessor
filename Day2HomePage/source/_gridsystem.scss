@@ -1,0 +1,16 @@
+@use 'sass:math';
+@function calculateWidth($column){
+    @return math.percentage($column/12)
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@for $i from 1 through 12{
+    .col-#{$i}{
+        width: calculateWidth($i) !important;
+    }
+}

@@ -1,0 +1,80 @@
+@mixin flexContainer(
+    $justify:center,
+    $align:center,
+    $wrap:wrap,
+
+)
+{
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+
+
+@mixin Btn-Color($bgcolor:rgb(28, 153, 237),$fontColor:rgb(255, 255, 255)){
+    all: unset;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: $bgcolor;
+    border: 1px $bgcolor solid;
+    border-radius: 10px;
+    color:$fontColor;
+    &:hover{
+        color: $bgcolor;
+        background-color: $fontColor;
+    }
+}
+@mixin bg-section($image-path, $overlay: false) {
+  position: relative;
+  background: url($image-path) no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  overflow: hidden;
+
+  @if $overlay {
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .content {
+    max-width: 700px;
+    padding: 2rem;
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+
+@mixin circle-bg($url, $size: 100px) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background: url($url) no-repeat center center / cover;
+    display: inline-block;
+  }
+  
+

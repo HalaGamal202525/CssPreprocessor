@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.p-1 {
+  padding: 10px;
+}
+
+.m-1 {
+  margin: 10px;
+}
+
+.p-2 {
+  padding: 20px;
+}
+
+.m-2 {
+  margin: 20px;
+}
+
+.p-3 {
+  padding: 30px;
+}
+
+.m-3 {
+  margin: 30px;
+}
+
+.p-4 {
+  padding: 40px;
+}
+
+.m-4 {
+  margin: 40px;
+}
+
+.p-5 {
+  padding: 50px;
+}
+
+.m-5 {
+  margin: 50px;
+}
+
+.p-6 {
+  padding: 60px;
+}
+
+.m-6 {
+  margin: 60px;
+}
+
+.p-7 {
+  padding: 70px;
+}
+
+.m-7 {
+  margin: 70px;
+}
+
+.p-8 {
+  padding: 80px;
+}
+
+.m-8 {
+  margin: 80px;
+}
+
+.p-9 {
+  padding: 90px;
+}
+
+.m-9 {
+  margin: 90px;
+}
+
+.p-10 {
+  padding: 100px;
+}
+
+.m-10 {
+  margin: 100px;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.btn-red {
+  all: unset;
+  background-color: red;
+  color: white;
+}
+.btn-red:hover {
+  color: red;
+  background-color: white;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.btn-blue {
+  all: unset;
+  background-color: blue;
+  color: white;
+}
+.btn-blue:hover {
+  color: blue;
+  background-color: white;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.btn-green {
+  all: unset;
+  background-color: green;
+  color: white;
+}
+.btn-green:hover {
+  color: green;
+  background-color: white;
+}
+
+.cards h1 {
+  font-size: 30px;
+}
+.cards .cards-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cards .cards-body .card {
+  width: 30%;
+}
+.cards .cards-body .card img {
+  width: 100%;
+}
+.cards .cards-body .card img:hover {
+  transform: scale(1.2);
+  transition: all 2s;
+}
+.cards .cards-body .card p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=style.css.map */
